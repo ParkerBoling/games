@@ -1,14 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Eaglercraft Launcher</title>
-  </head>
-  <body>
-    <h1>Choose Version</h1>
-    <ul>
-      <li><a href="/152/stable-download/web/">Play Eaglercraft 1.5.2</a></li>
-      <li><a href="/188/">Play Eaglercraft 1.8.8</a></li>
-      <li><a href="/1122/">Play Eaglercraft 1.12.2</a></li>
-    </ul>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eaglercraft Launcher</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #1e1e1e;
+      color: #ffffff;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #2c2c2c;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 0.5rem;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 6px;
+      background: #444;
+      color: #fff;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background: #2196f3;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Eaglercraft Web Launcher</h1>
+    <select id="versionSelector">
+      <option value="">-- Select Version --</option>
+      <option value="/152/">1.5.2 (JS)</option>
+      <option value="/188/">1.8.8 (JS)</option>
+      <option value="/188-wasm/">1.8.8 (WASM)</option>
+      <option value="/1122/">1.12.2 (JS)</option>
+      <option value="/1122-wasm/">1.12.2 (WASM)</option>
+    </select>
+    <br />
+    <button onclick="launchGame()">Play</button>
+  </div>
+
+  <script>
+    function launchGame() {
+      const version = document.getElementById('versionSelector').value;
+      if (version) {
+        window.location.href = version;
+      } else {
+        alert("Please select a version.");
+      }
+    }
+  </script>
+</body>
 </html>
