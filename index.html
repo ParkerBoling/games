@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Selector</title>
-  </head>
-  <body>
-    <h1>Choose Version</h1>
-    <ul>
-      <li><a href="/mc/">Play MC</a></li>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Drive - Google Drive</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #1e1e1e;
+      color: #ffffff;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #2c2c2c;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .version-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .version-links li {
+      margin: 0.7rem 0;
+    }
+
+    .version-links a {
+      color: #90caf9;
+      background: #1e88e5;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .version-links a:hover {
+      background: #1565c0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Game Selector</h1>
+    <ul class="game links">
+      <li><a href="/mc/">Minecraft</a></li>
     </ul>
-  </body>
+  </div>
+</body>
 </html>
